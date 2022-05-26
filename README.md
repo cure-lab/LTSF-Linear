@@ -53,8 +53,8 @@ mkdir dataset
 
 ### Training Example
 - In `scripts/ `, we provide the model implementation *Dlinear/Autoformer/Informer/Transformer*
-- In `FEDformer/scripts/`, we provide the FEDformer implementation
-- In `Pyraformer/scripts/`, we provide the Pyraformer implementation
+- In `FEDformer/scripts/`, we provide the *FEDformer* implementation
+- In `Pyraformer/scripts/`, we provide the *Pyraformer* implementation
 
 For example:
 
