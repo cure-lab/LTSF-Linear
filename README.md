@@ -13,7 +13,7 @@ Beside DLinear, we provide five significant forecasting Transformers to re-imple
 
 
 ## Detailed Description
-We provide all experiment script files in ./scripts:
+We provide all experiment script files in `./scripts`:
 | Files      |                              Interpretation                          |
 | ------------- | -------------------------------------------------------| 
 | EXP-LongForecasting      | Long-term Time Series Forecasting Task                    |
