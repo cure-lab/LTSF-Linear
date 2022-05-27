@@ -19,8 +19,6 @@ python -u run_longExp.py \
   --seq_len $seq_len \
   --pred_len 96 \
   --enc_in 7 \
-  --dec_in 7 \
-  --c_out 7 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LongForecasting/DLinear_ETTh2_$seq_len'_'96.log
 
@@ -35,8 +33,6 @@ python -u run_longExp.py \
   --seq_len $seq_len \
   --pred_len 192 \
   --enc_in 7 \
-  --dec_in 7 \
-  --c_out 7 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LongForecasting/DLinear_ETTh2_$seq_len'_'192.log
 
@@ -51,8 +47,6 @@ python -u run_longExp.py \
   --seq_len $seq_len \
   --pred_len 336 \
   --enc_in 7 \
-  --dec_in 7 \
-  --c_out 7 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LongForecasting/DLinear_ETTh2_$seq_len'_'336.log
 
@@ -67,7 +61,5 @@ python -u run_longExp.py \
   --seq_len $seq_len \
   --pred_len 720 \
   --enc_in 7 \
-  --dec_in 7 \
-  --c_out 7 \
   --des 'Exp' \
   --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LongForecasting/DLinear_ETTh2_$seq_len'_'720.log
