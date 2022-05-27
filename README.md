@@ -1,6 +1,6 @@
 # DLinear
 
-This is a Pytorch implementation of DLinear: "Are Transformers Effective for Time Series Forecasting?". 
+This is a Pytorch implementation of DLinear: "[Are Transformers Effective for Time Series Forecasting?](https://arxiv.org/pdf/2205.13504.pdf)". 
 
 ## Features
 
