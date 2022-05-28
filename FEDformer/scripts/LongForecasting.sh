@@ -1,10 +1,10 @@
 # cd FEDformer
-if [ ! -d "./logs" ]; then
-    mkdir ./logs
+if [ ! -d "../logs" ]; then
+    mkdir ../logs
 fi
 
-if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
+if [ ! -d "../logs/LongForecasting" ]; then
+    mkdir ../logs/LongForecasting
 fi
 
 for preLen in 96 192 336 720
@@ -28,7 +28,7 @@ python -u run.py \
   --c_out 7 \
   --des 'Exp' \
   --d_model 512 \
-  --itr 1  >./logs/LongForecasting/FEDformer_ETTm1_$pred_len.log
+  --itr 1  >../logs/LongForecasting/FEDformer_ETTm1_$pred_len.log
 
 # ETTh1
 python -u run.py \
@@ -49,7 +49,7 @@ python -u run.py \
   --c_out 7 \
   --des 'Exp' \
   --d_model 512 \
-  --itr 1 >./logs/LongForecasting/FEDformer_ETTh1_$pred_len.log
+  --itr 1 >../logs/LongForecasting/FEDformer_ETTh1_$pred_len.log
 
 # ETTm2
 python -u run.py \
@@ -70,7 +70,7 @@ python -u run.py \
   --c_out 7 \
   --des 'Exp' \
   --d_model 512 \
-  --itr 1 >./logs/LongForecasting/FEDformer_ETTm2_$pred_len.log
+  --itr 1 >../logs/LongForecasting/FEDformer_ETTm2_$pred_len.log
 
 # ETTh2
 python -u run.py \
@@ -91,7 +91,7 @@ python -u run.py \
   --c_out 7 \
   --des 'Exp' \
   --d_model 512 \
-  --itr 1 >./logs/LongForecasting/FEDformer_ETTh2_$pred_len.log
+  --itr 1 >../logs/LongForecasting/FEDformer_ETTh2_$pred_len.log
 
 # electricity
 python -u run.py \
@@ -111,7 +111,7 @@ python -u run.py \
  --dec_in 321 \
  --c_out 321 \
  --des 'Exp' \
- --itr 1 >./logs/LongForecasting/FEDformer_electricity_$pred_len.log
+ --itr 1 >../logs/LongForecasting/FEDformer_electricity_$pred_len.log
 
 # exchange
 python -u run.py \
@@ -131,7 +131,7 @@ python -u run.py \
  --dec_in 8 \
  --c_out 8 \
  --des 'Exp' \
- --itr 1 >./logs/LongForecasting/FEDformer_exchange_rate_$pred_len.log
+ --itr 1 >../logs/LongForecasting/FEDformer_exchange_rate_$pred_len.log
 
 # traffic
 python -u run.py \
@@ -152,7 +152,7 @@ python -u run.py \
  --c_out 862 \
  --des 'Exp' \
  --itr 1 \
- --train_epochs 3 >./logs/LongForecasting/FEDformer_traffic_$pred_len.log
+ --train_epochs 3 >../logs/LongForecasting/FEDformer_traffic_$pred_len.log
 
 # weather
 python -u run.py \
@@ -172,7 +172,7 @@ python -u run.py \
  --dec_in 21 \
  --c_out 21 \
  --des 'Exp' \
- --itr 1 >./logs/LongForecasting/FEDformer_weather_$pred_len.log
+ --itr 1 >../logs/LongForecasting/FEDformer_weather_$pred_len.log
 done
 
 
@@ -196,7 +196,7 @@ python -u run.py \
  --dec_in 7 \
  --c_out 7 \
  --des 'Exp' \
- --itr 1 >./logs/LongForecasting/FEDformer_ili_$pred_len.log
+ --itr 1 >../logs/LongForecasting/FEDformer_ili_$pred_len.log
 done
 
 # cd ..

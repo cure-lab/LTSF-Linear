@@ -66,7 +66,7 @@ It will start to train DLinear, the results will be shown in `logs/LongForecasti
 
 All scripts about using DLinear on long forecasting task is in `scripts/EXP-LongForecasting/DLinear/`, you can run them in a similar way. The default look-back window in scripts is 96, DLinear generally achieves better results with longer look-back window as dicussed in the paper. For instance, you can simpy change the **seq_len** (look-back window size) in scripts to 336 to obtain better performance.
 
-Scripts about look-back window size and long forecasting of FEDformer and Pyraformer is in `FEDformer/scripts` and `Pyraformer/scripts`, respectively. You can run them in a similar way.
+Scripts about look-back window size and long forecasting of FEDformer and Pyraformer is in `FEDformer/scripts` and `Pyraformer/scripts`, respectively. To run them, you need to first `cd FEDformer` or `cd Pyraformer`. Then, you can use sh to run them in a similar way. Logs will store in `logs/`.
 
 Each experiment in `scripts/EXP-LongForecasting/DLinear/` takes 5min-20min. For other Transformer scripts, since we put all related experiments in one script file, directly running them will take 8 hours-1 day. You can keep the experiments you interested in and comment out the others. 
 
