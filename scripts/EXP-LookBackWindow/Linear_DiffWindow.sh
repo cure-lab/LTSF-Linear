@@ -141,6 +141,6 @@ do
   --pred_len $pred_len  \
   --enc_in 7 \
   --des 'Exp' \
-  --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LookBackWindow/DLinear_national_illness_$seq_len'_'$pred_len.log
+  --itr 1 --batch_size 32 --learning_rate 0.05 >logs/LookBackWindow/DLinear_ili_$seq_len'_'$pred_len.log
 done
 done
