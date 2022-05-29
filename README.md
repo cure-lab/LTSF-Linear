@@ -73,3 +73,17 @@ Each experiment in `scripts/EXP-LongForecasting/DLinear/` takes 5min-20min. For 
 ### DLinear Weights Visualization
 As shown in our paper, the weights of DLinear can reveal some charateristic of the data, i.e., the periodicity. We provide the weight visualization of DLinear in `weight_plot.py`. To run the visualization, you need to input the model path (model_name) of DLinear (the model directory in `./checkpoint` by default).
 
+## Citing
+
+If you find this repository useful for your work, please consider citing it as follows:
+
+```bibtex
+@article{Zeng2022AreTE,
+  title={Are Transformers Effective for Time Series Forecasting?},
+  author={Ailing Zeng and Muxi Chen and Lei Zhang and Qiang Xu},
+  journal={arXiv preprint arXiv:2205.13504},
+  year={2022}
+}
+```
+
+Please remember to cite all the datasets and compared methods if you use them in your experiments.
