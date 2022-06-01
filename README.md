@@ -46,7 +46,7 @@ Although DLinear is simple, it has some compelling characteristics:
 
 ### Comparison with Transformers
 ![image](pics/336results.png)
-DLinear outperforms FEDformer by over 40% on Exchange rate, around 30% on Traffic, Electricity, and Weather, and around 25% on ETTm1 and Weather.
+DLinear outperforms FEDformer by over 40% on Exchange rate, around 30% on Traffic, Electricity, and Weather, and around 25% on ETTm1.
 
 ### Efficiency
 ![image](pics/efficiency.png)
