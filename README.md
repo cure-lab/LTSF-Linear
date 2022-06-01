@@ -47,11 +47,12 @@ Although DLinear is simple, it has some compelling characteristics:
 ### Comparison with Transformers
 ![image](pics/336results.png)
 Multivariate long sequence time-series forecasting results on nine benchmarks with a long look-back window size L = 336 of DLinear and forecasting horizon T ∈ {96, 192, 336, 720}. Since the SOTA methods FEDformer and Autoformer obtain better performance with an input length L = 96, we keep their best settings for comparison. FEDformer-f and FEDformer-w represent the FEDformer with fourier enhanced blocks and wavelet enhanced blocks, respectively. The best results are highlighted in red bold and the second best results are highlighted with a blue underline.
+
 DLinear outperforms FEDformer by over 40% on Exchange rate, around 30% on Traffic, Electricity, and Weather, and around 25% on ETTm1.
 
 ### Efficiency
 ![image](pics/efficiency.png)
-
+Comparison of method efficiency on the Electricity dataset with a look-back window size of 96 and forecasting horizon of 720 steps. MACs are the number of multiply-accumulate operations. The inference time is an average result of 5 runs.
 ## Getting Started
 ### Environment Requirements
 
