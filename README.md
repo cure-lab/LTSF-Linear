@@ -35,6 +35,21 @@ The implementation of FEDformer is from https://github.com/MAZiqing/FEDformer
 
 The implementation of Pyraformer is from https://github.com/alipay/Pyraformer
 
+## DLinear
+### Structure of DLinear
+![image](pics/DLinear.png)
+Although DLinear is simple, it has some compelling characteristics:
+- An O(1) maximum signal traversing path length: The shorter the path, the better the dependencies are captured, making DLinear capable of capturing both short-range and long-range temporal relations.
+- High-efficiency: As each branch has only one linear layer, it costs much lower memory and fewer parameters and has a faster inference speed than existing Transformers.
+- Interpretability: After training, we can visualize weights from the seasonality and trend branches to have some insights on the predicted values.
+- Easy-to-use: DLinear can be obtained easily without tuning model hyper-parameters.
+
+### Comparison with Transformers
+![image](pics/336results.png)
+DLinear outperforms FEDformer by over 40% on Exchange rate, around 30% on Traffic, Electricity, and Weather, and around 25% on ETTm1 and Weather.
+
+### Efficiency
+![image](pics/efficiency.png)
 
 ## Getting Started
 ### Environment Requirements
@@ -79,6 +94,7 @@ Each experiment in `scripts/EXP-LongForecasting/DLinear/` takes 5min-20min. For 
 ### DLinear Weights Visualization
 As shown in our paper, the weights of DLinear can reveal some charateristic of the data, i.e., the periodicity. We provide the weight visualization of DLinear in `weight_plot.py`. To run the visualization, you need to input the model path (model_name) of DLinear (the model directory in `./checkpoint` by default).
 
+![image](pics/Visualization.png)
 ## Citing
 
 If you find this repository useful for your work, please consider citing it as follows:
