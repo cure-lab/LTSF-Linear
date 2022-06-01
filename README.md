@@ -2,7 +2,13 @@
 
 This is a Pytorch implementation of DLinear: "[Are Transformers Effective for Time Series Forecasting?](https://arxiv.org/pdf/2205.13504.pdf)". 
 
+
 ## Features
+- [x] Support both [Univariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear/univariate) and [Multivariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear) long-term time series forecasting.
+- [x] Support visualization of weights.
+- [x] Support scripts on different [look-back window size](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LookBackWindow).
+
+
 
 Beside DLinear, we provide five significant forecasting Transformers to re-implement the results in the paper.
 - [x] [Transformer](https://arxiv.org/abs/1706.03762) (NeuIPS 2017)
