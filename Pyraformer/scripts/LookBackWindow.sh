@@ -16,7 +16,7 @@ for seqlen in 24 48 72 96 120 144 168 336 504 672 720
     python long_range_main.py -window_size [2,2,2] -data_path traffic.csv -data traffic -input_size $seqlen -predict_step $pred_len  -n_head 6 -lr 0.00001 -d_model 256 >../logs/LookBackWindow/Pyraformer_traffic_$seqlen'_'$pred_len.log
     python long_range_main.py -window_size [2,2,2] -data_path weather.csv -data weather -input_size $seqlen -predict_step $pred_len -n_head 6 -lr 0.00001 -d_model 256 >../logs/LookBackWindow/Pyraformer_weather_$seqlen'_'$pred_len.log
     python long_range_main.py -window_size [2,2,2] -data ETTh1 -input_size $seqlen -predict_step $pred_len -n_head 6 >../logs/LookBackWindow/Pyraformer_ETTh1_$seqlen'_'$pred_len.log
-    python long_range_main.py -window_size [2,2,2] -data ETTh2 -input_size $seqlen -predict_step $pred_len -n_head 6 >../logs/LookBackWindow/Pyraformer_ETTh2_$seqlen'_'$pred_len.log
+    python long_range_main.py -window_size [2,2,2] -data ETTh2 -data_path ETTh2.csv -input_size $seqlen -predict_step $pred_len -n_head 6 >../logs/LookBackWindow/Pyraformer_ETTh2_$seqlen'_'$pred_len.log
 done
 done
 
