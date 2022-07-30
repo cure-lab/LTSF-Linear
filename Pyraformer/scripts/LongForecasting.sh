@@ -17,9 +17,9 @@ python long_range_main.py -data ETTh1 -input_size 96 -predict_step 720 -inner_si
 # # ETTh2
 for pred_len in 96 192 336
 do
-python long_range_main.py -data ETTh2 -input_size 96 -predict_step $pred_len -n_head 6 >../logs/LongForecasting/Pyraformer_ETTh2_$pred_len.log
+python long_range_main.py -data ETTh2 -input_size 96 -data_path ETTh2.csv -predict_step $pred_len -n_head 6 >../logs/LongForecasting/Pyraformer_ETTh2_$pred_len.log
 done
-python long_range_main.py -data ETTh2 -input_size 96 -predict_step 720 -inner_size 5 -n_head 6 >../logs/LongForecasting/Pyraformer_ETTh2_720.log
+python long_range_main.py -data ETTh2 -input_size 96 -data_path ETTh2.csv -predict_step 720 -inner_size 5 -n_head 6 >../logs/LongForecasting/Pyraformer_ETTh2_720.log
 
 # ETTm1
 python long_range_main.py -data ETTm1 -data_path ETTm1.csv -input_size 96 -predict_step 96 \
