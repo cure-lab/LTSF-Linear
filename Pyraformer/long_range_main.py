@@ -218,13 +218,13 @@ def eval_epoch(model, test_dataset, test_loader, opt, epoch):
                 batch_x_mark = torch.cat([batch_x_mark, batch_y_mark[:, 0:1, :]], dim=1)
             outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark, False)
 
-            if warm > 5: 
-                import time
-                start = time.time()
-                outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark, False)
-                end = time.time()
-                print('inference: ',end-start)
-                exit()
+#             if warm > 5: 
+#                 import time
+#                 start = time.time()
+#                 outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark, False)
+#                 end = time.time()
+#                 print('inference: ',end-start)
+#                 exit()
             warm += 1 
             # if inverse, both the output and the ground truth are denormalized.
             if opt.inverse:
