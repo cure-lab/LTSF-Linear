@@ -51,7 +51,7 @@ LStF-Linear is a set of linear models.
 Although LSTF-Linear is simple, it has some compelling characteristics:
 - An O(1) maximum signal traversing path length: The shorter the path, the better the dependencies are captured, making LSTF-Linear capable of capturing both short-range and long-range temporal relations.
 - High-efficiency: As each branch has only one linear layer, it costs much lower memory and fewer parameters and has a faster inference speed than existing Transformers.
-- Interpretability: After training, we can visualize weights from the seasonality and trend branches to have some insights on the predicted values.
+- Interpretability: After training, we can visualize weights to have some insights on the predicted values.
 - Easy-to-use: LSTF-Linear can be obtained easily without tuning model hyper-parameters.
 
 ### Comparison with Transformers
