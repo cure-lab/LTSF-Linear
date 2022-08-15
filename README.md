@@ -1,5 +1,5 @@
 # Updates 2022/8/15
-We add two Linear model to this repo. Now we have a LSTF-Linear family.
+We add two Linear models to this repo. Now we have a LSTF-Linear family.
   - Linear: Just one linear layer.
   - NLinear: Normalization Linear. See section 'LSTF-Linear' for more details. 
 
