@@ -3,7 +3,8 @@ We add two Linear models to this repo. Now we have a LSTF-Linear family.
   - Linear: Just one linear layer.
   - NLinear: Normalization Linear. See section 'LSTF-Linear' for more details. 
 
-We update some scripts of DLinear. Linear, NLinear and DLinear use the same scripts.
+We update some scripts of DLinear. 
+  - Linear, NLinear and DLinear use the same scripts.
   - Some results of DLinear are slightly different now.
 
 # LSTF-Linear
