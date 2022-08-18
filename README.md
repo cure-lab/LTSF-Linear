@@ -1,10 +1,12 @@
 # Updates 2022/8/15
-We add two Linear models to this repo. Now we have a LTSF-Linear family.
+- We update our [paper](https://arxiv.org/pdf/2205.13504.pdf) with comprehensive analyses on why existing LTSF-Transformers do not work well on the LTSF problem!
+- Besides DLinear, we're exicted to add two Linear models to the paper and this repo. Now we have a LTSF-Linear family!
   - Linear: Just one linear layer.
-  - NLinear: Normalization Linear. See section 'LTSF-Linear' for more details. 
+  - DLinear: Decomposition Linear to handle data with trend and seasonality patterns.
+  - NLinear: A Normalized Linear to deal with train-test set distribution shifts. See section 'LTSF-Linear' for more details. 
 
-We update some scripts of DLinear. 
-  - Linear, NLinear and DLinear use the same scripts.
+- We update some scripts of LTSF-Linear. 
+  - Linear, NLinear, and DLinear use the same scripts.
   - Some results of DLinear are slightly different now.
 
 # LTSF-Linear
@@ -28,11 +30,11 @@ We provide all experiment script files in `./scripts`:
 | Files      |                              Interpretation                          |
 | ------------- | -------------------------------------------------------| 
 | EXP-LongForecasting      | Long-term Time Series Forecasting Task                    |
-| EXP-LookBackWindow      | Study the impact of different look-back window size   | 
-| EXP-Embedding        | Study the impact of different embedding strategies      |
+| EXP-LookBackWindow      | Study the impact of different look-back window sizes   | 
+| EXP-Embedding        | Study the effects of different embedding strategies      |
 
 
-This code is simply build on the code base of Autoformer. We appreciate the following github repos a lot for their valuable code base or datasets:
+This code is simply built on the code base of Autoformer. We appreciate the following GitHub repos a lot for their valuable code base or datasets:
 
 The implementation of Autoformer, Informer, Transformer is from https://github.com/thuml/Autoformer
 
