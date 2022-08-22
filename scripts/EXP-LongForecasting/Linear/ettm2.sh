@@ -63,4 +63,4 @@ python -u run_longExp.py \
   --pred_len 720 \
   --enc_in 7 \
   --des 'Exp' \
-  --itr 1 --batch_size 32 --learning_rate 0.1 >logs/LongForecasting/$model_name'_'ETTm2_$seq_len'_'720.log
+  --itr 1 --batch_size 32 --learning_rate 0.01 >logs/LongForecasting/$model_name'_'ETTm2_$seq_len'_'720.log
