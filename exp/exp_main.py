@@ -283,7 +283,7 @@ class Exp_Main(Exp_Basic):
             os.makedirs(folder_path)
 
         mae, mse, rmse, mape, mspe, rse, corr = metric(preds, trues)
-        print('mse:{}, mae:{}, rse:{}, corr:{}'.format(mse, mae, rse, corr))
+        print('mse:{}, mae:{}'.format(mse, mae))
         f = open("result.txt", 'a')
         f.write(setting + "  \n")
         f.write('mse:{}, mae:{}, rse:{}, corr:{}'.format(mse, mae, rse, corr))
