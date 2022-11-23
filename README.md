@@ -4,7 +4,7 @@ This repo is the official Pytorch implementation of LTSF-Linear: "[Are Transform
 
 
 ## Updates
-- [2022/11/23] Accepted to AAAI 2023 with three strong accept! We also release a **benchmark for long-term time series forecasting** for further research.
+- [2022/11/23] Accepted to AAAI 2023 with three strong accept! We also release a **[benchmark for long-term time series forecasting](LTSF-Benchmark.md)** for further research.
 - [2022/08/25] We update our [paper](https://arxiv.org/pdf/2205.13504.pdf) with comprehensive analyses on why existing LTSF-Transformers do not work well on the LTSF problem!
 - [2022/08/25] Besides DLinear, we're exicted to add two Linear models to the paper and this repo. Now we have a LTSF-Linear family!
   - Linear: Just one linear layer.
@@ -18,7 +18,7 @@ This repo is the official Pytorch implementation of LTSF-Linear: "[Are Transform
 
 
 ## Features
-- [x] A benchmark for long-term time series forecasting.
+- [x] Add a [benchmark](LTSF-Benchmark.md) for long-term time series forecasting.
 - [x] Support both [Univariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear/univariate) and [Multivariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear) long-term time series forecasting.
 - [x] Support visualization of weights.
 - [x] Support scripts on different [look-back window size](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LookBackWindow).
