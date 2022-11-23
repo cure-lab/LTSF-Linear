@@ -1,3 +1,7 @@
+## Features
+- To facilitate the follow-up research, we have provided the method comparison results under commonly used datasets, and the follow-up methods will continue to be updated.
+- Support recent SOTA and traditional but popular methods.
+- Any Pull requests are welcome!
 
 ## Multivariate long-term series forecasting results on four ETT datasets with input length I = 96 and prediction length O ∈{96, 192, 336, 720}
 
