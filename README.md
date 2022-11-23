@@ -1,18 +1,24 @@
-# Updates 2022/8/15
-- We update our [paper](https://arxiv.org/pdf/2205.13504.pdf) with comprehensive analyses on why existing LTSF-Transformers do not work well on the LTSF problem!
-- Besides DLinear, we're exicted to add two Linear models to the paper and this repo. Now we have a LTSF-Linear family!
+# Are Transformers Effective for Time Series Forecasting? (AAAI 2023)
+
+This repo is the official Pytorch implementation of LTSF-Linear: "[Are Transformers Effective for Time Series Forecasting?](https://arxiv.org/pdf/2205.13504.pdf)". 
+
+
+## Updates
+- [2022/11/23] Accepted to AAAI 2023 with three strong accept! We also release a **benchmark for long-term time series forecasting** for further research.
+- [2022/08/25] We update our [paper](https://arxiv.org/pdf/2205.13504.pdf) with comprehensive analyses on why existing LTSF-Transformers do not work well on the LTSF problem!
+- [2022/08/25] Besides DLinear, we're exicted to add two Linear models to the paper and this repo. Now we have a LTSF-Linear family!
   - Linear: Just one linear layer.
   - DLinear: Decomposition Linear to handle data with trend and seasonality patterns.
   - NLinear: A Normalized Linear to deal with train-test set distribution shifts. See section 'LTSF-Linear' for more details. 
 
-- We update some scripts of LTSF-Linear. 
+- [2022/08/25] We update some scripts of LTSF-Linear. 
   - Linear, NLinear, and DLinear use the same scripts.
   - Some results of DLinear are slightly different now.
 
-# LTSF-Linear
-This is a Pytorch implementation of LTSF-Linear: "[Are Transformers Effective for Time Series Forecasting?](https://arxiv.org/pdf/2205.13504.pdf)". 
+
 
 ## Features
+- [x] A benchmark for long-term time series forecasting.
 - [x] Support both [Univariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear/univariate) and [Multivariate](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LongForecasting/DLinear) long-term time series forecasting.
 - [x] Support visualization of weights.
 - [x] Support scripts on different [look-back window size](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LookBackWindow).
