@@ -120,11 +120,11 @@ As shown in our paper, the weights of LTSF-Linear can reveal some charateristic 
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```bibtex
-@article{Zeng2022AreTE,
+@inproceedings{Zeng2022AreTE,
   title={Are Transformers Effective for Time Series Forecasting?},
   author={Ailing Zeng and Muxi Chen and Lei Zhang and Qiang Xu},
-  journal={arXiv preprint arXiv:2205.13504},
-  year={2022}
+  journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2023}
 }
 ```
 
