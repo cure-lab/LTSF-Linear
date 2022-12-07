@@ -1,4 +1,4 @@
-# add --individual for DLinear-I
+
 if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
