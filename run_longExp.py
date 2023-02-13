@@ -113,7 +113,6 @@ if args.is_training:
             args.factor,
             args.embed,
             args.distil,
-            args.train_only,
             args.des, ii)
 
         exp = Exp(args)  # set experiments
