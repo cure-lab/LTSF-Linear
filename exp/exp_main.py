@@ -5,6 +5,7 @@ from utils.tools import EarlyStopping, adjust_learning_rate, visual, test_params
 from utils.metrics import metric
 
 import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 from torch import optim
@@ -97,8 +98,9 @@ class Exp_Main(Exp_Basic):
 
     def train(self, setting):
         train_data, train_loader = self._get_data(flag='train')
-        vali_data, vali_loader = self._get_data(flag='val')
-        test_data, test_loader = self._get_data(flag='test')
+        if not self.args.train_only:
+            vali_data, vali_loader = self._get_data(flag='val')
+            test_data, test_loader = self._get_data(flag='test')
 
         path = os.path.join(self.args.checkpoints, setting)
         if not os.path.exists(path):
@@ -184,15 +186,21 @@ class Exp_Main(Exp_Basic):
 
             print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
             train_loss = np.average(train_loss)
-            vali_loss = self.vali(vali_data, vali_loader, criterion)
-            test_loss = self.vali(test_data, test_loader, criterion)
+            if not self.args.train_only:
+                vali_loss = self.vali(vali_data, vali_loader, criterion)
+                test_loss = self.vali(test_data, test_loader, criterion)
 
-            print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
-                epoch + 1, train_steps, train_loss, vali_loss, test_loss))
-            early_stopping(vali_loss, self.model, path)
-            if early_stopping.early_stop:
-                print("Early stopping")
-                break
+                print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
+                    epoch + 1, train_steps, train_loss, vali_loss, test_loss))
+                early_stopping(vali_loss, self.model, path)
+                if early_stopping.early_stop:
+                    print("Early stopping")
+                    break
+            else:
+                print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f}".format(
+                    epoch + 1, train_steps, train_loss))
+                early_stopping(train_loss, self.model, path)
+
 
             adjust_learning_rate(model_optim, epoch + 1, self.args)
 
@@ -341,12 +349,15 @@ class Exp_Main(Exp_Basic):
 
         preds = np.array(preds)
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
-
+        if (pred_data.scale):
+            preds = pred_data.inverse_transform(preds)
+        
         # result save
         folder_path = './results/' + setting + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
         np.save(folder_path + 'real_prediction.npy', preds)
+        pd.DataFrame(np.append(np.transpose([pred_data.future_dates]), preds[0], axis=1), columns=pred_data.cols).to_csv(folder_path + 'real_prediction.csv', index=False)
 
         return
