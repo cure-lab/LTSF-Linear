@@ -13,6 +13,7 @@ data_dict = {
 def data_provider(args, flag):
     Data = data_dict[args.data]
     timeenc = 0 if args.embed != 'timeF' else 1
+    train_only = args.train_only
 
     if flag == 'test':
         shuffle_flag = False
@@ -39,7 +40,8 @@ def data_provider(args, flag):
         features=args.features,
         target=args.target,
         timeenc=timeenc,
-        freq=freq
+        freq=freq,
+        train_only=train_only
     )
     print(flag, len(data_set))
     data_loader = DataLoader(
