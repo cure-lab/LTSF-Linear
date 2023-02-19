@@ -32,7 +32,14 @@ bash ./scripts/run_S.sh
 If you find this repo useful, please cite our paper. 
 
 ```
-xxxxx
+@inproceedings{zhou2022fedformer,
+  title={Fedformer: Frequency enhanced decomposed transformer for long-term series forecasting},
+  author={Zhou, Tian and Ma, Ziqing and Wen, Qingsong and Wang, Xue and Sun, Liang and Jin, Rong},
+  booktitle={International Conference on Machine Learning},
+  pages={27268--27286},
+  year={2022},
+  organization={PMLR}
+}
 ```
 
 ## Contact
