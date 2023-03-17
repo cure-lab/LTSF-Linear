@@ -277,13 +277,10 @@ class Exp_Main(Exp_Basic):
         if self.args.test_flop:
             test_params_flop((batch_x.shape[1],batch_x.shape[2]))
             exit()
-        preds = np.array(preds)
-        trues = np.array(trues)
-        inputx = np.array(inputx)
-
-        preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
-        trues = trues.reshape(-1, trues.shape[-2], trues.shape[-1])
-        inputx = inputx.reshape(-1, inputx.shape[-2], inputx.shape[-1])
+            
+        preds = np.concatenate(preds, axis=0)
+        trues = np.concatenate(trues, axis=0)
+        inputx = np.concatenate(inputx, axis=0)
 
         # result save
         folder_path = './results/' + setting + '/'
@@ -348,7 +345,7 @@ class Exp_Main(Exp_Basic):
                 preds.append(pred)
 
         preds = np.array(preds)
-        preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
+        preds = np.concatenate(preds, axis=0)
         if (pred_data.scale):
             preds = pred_data.inverse_transform(preds)
         
