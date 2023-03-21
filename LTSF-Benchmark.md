@@ -3,7 +3,7 @@
 - Support recent SOTA and traditional but popular methods.
 - Any Pull requests are welcome!
 
-## Multivariate long-term series forecasting results on four ETT datasets with input length I = 96 and prediction length O ∈{96, 192, 336, 720}
+## Multivariate long-term series forecasting results on four ETT datasets with best input length and prediction length O ∈{96, 192, 336, 720}
 
 |Methods|Dataset|ETTH1| | | |ETTH2| | | |ETTm1| | | |ETTm2| | | |
 |:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|:----|
