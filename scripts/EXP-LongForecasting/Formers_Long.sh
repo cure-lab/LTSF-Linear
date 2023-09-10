@@ -6,7 +6,7 @@ fi
 if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
-
+./scripts/download_datasets.sh
 for model_name in Autoformer Informer Transformer
 do 
 for pred_len in 96 192 336 720

@@ -5,6 +5,7 @@ fi
 if [ ! -d "./logs/LookBackWindow" ]; then
     mkdir ./logs/LookBackWindow
 fi
+./scripts/download_datasets.sh
 
 for model_name in Autoformer Informer Transformer
 do 

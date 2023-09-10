@@ -8,6 +8,7 @@ fi
 if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
+./scripts/download_datasets.sh
 
 # for model_name in Naive GBRT ARIMA SARIMA
 for model_name in Naive

@@ -4,13 +4,9 @@
 # 3: value embedding + positional embedding
 # 4: value embedding 
 
-if [ ! -d "./logs" ]; then
-    mkdir ./logs
-fi
-
-if [ ! -d "./logs/Embedding" ]; then
-    mkdir ./logs/Embedding
-fi
+mkdir -p ./logs
+mkdir -p ./logs/Embedding
+./scripts/download_datasets.sh
 
 for embed_type in 1 2 3 4
 do
