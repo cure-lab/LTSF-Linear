@@ -1,0 +1,27 @@
+[project]
+name = "ltsf-linear"
+authors = [
+  {name = "Ailing Zeng", email = "alzeng@cse.cuhk.edu.hk"},
+  {name = "Muxi Chen", email = "mxchen21@cse.cuhk.edu.hk"},
+  {name = "Lei Zhang", email = "leizhang@idea.edu.cn"},
+  {name = "Qiang Xu", email = "qxu@cse.cuhk.edu.hk"},
+]
+requires-python = ">=3.6,<=3.9"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "pandas",
+  "scikit-learn",
+  "torch==1.9.0",
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["ltsf_linear"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ltsf_linear.__version__"}
+
+[project.optional-dependencies]
+stats=["pmdarima"]
+all = ["ltsf_linear[stats]"]

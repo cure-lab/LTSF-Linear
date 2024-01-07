@@ -1,5 +1,5 @@
 model_name=DLinear
-
+./scripts/download_datasets.sh
 for pred_len in 24 720
 do
 for seq_len in 48 72 96 120 144 168 192 336 504 672 720

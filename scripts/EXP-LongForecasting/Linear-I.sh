@@ -5,6 +5,7 @@ fi
 if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
+./scripts/download_datasets.sh
 seq_len=336
 model_name=NLinear
 for pred_len in 96 192 336 729
